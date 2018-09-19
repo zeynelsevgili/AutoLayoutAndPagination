@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        // window UIViewController ı da içine alıyor.
+         window = UIWindow()
+        window?.makeKeyAndVisible()
+        
+        let layout = UICollectionViewFlowLayout()
+        
+        layout.scrollDirection = .horizontal // hücrenin yatay kaymasını sağlar
+        // SwipingVC başlangıç sayfası yaptık
+        let swipingController = SwipingVC(collectionViewLayout: layout)
+
+        window?.rootViewController = swipingController
+ 
+        
         return true
     }
 
